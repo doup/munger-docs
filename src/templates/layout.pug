@@ -1,0 +1,56 @@
+doctype html
+html
+    head
+        block title
+            title Index
+        link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto|Slabo+27px')
+        link(rel='stylesheet' href=url('/assets/main.css'))
+        block css
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+    body
+        .docs-menu-hamburger(data-docs-menu-toggle)
+            i.fa.fa-bars
+        aside.docs-menu(data-docs-menu style="display: none;")
+            ul
+                li: a(href=url('/index.html')) Index
+                li Layout
+                    ul
+                        li: a(href=url('/layout/align.html')) Align
+                        li: a(href=url('/layout/header-a.html')) Header A (Cello Verd)
+                        li: a(href=url('/layout/header-b.html')) Header B (La Boop)
+                        li: a(href=url('/layout/header-c.html')) Header C (Mugari)
+                        li: a(href=url('/layout/header-d.html')) Header D (Mekop)
+                        li: a(href=url('/layout/header-e.html')) Header E (Mess)
+                        li: a(href=url('/layout/footer.html')) Footer
+                li List
+                    ul
+                        li: a(href=url('/list/icon-list.html')) Icon List
+                li Misc
+                    ul
+                        li: a(href=url('/misc/anchor.html')) Anchor
+                        li: a(href=url('/misc/bg.html')) Background Color
+                        li: a(href=url('/misc/media-gallery.html')) Media Gallery
+                        li: a(href=url('/misc/media-popup.html')) Media Popup
+                        li: a(href=url('/misc/slider.html')) Slider
+                li Section
+                    ul
+                        li: a(href=url('/section/boxed.html')) Boxed
+                        li: a(href=url('/section/edge-image.html')) Edge Image
+                li Typography
+                    ul
+                        li: a(href=url('/typography/small.html')) Small/Smaller
+                        li: a(href=url('/typography/text-columns.html')) Text columns
+                li: a(href=url('/kitchen-sink.html')) Kitchen Sink
+        .docs-title
+            block title
+
+        block header
+        main
+            block main
+
+        script(src='https://code.jquery.com/jquery-3.1.0.min.js' integrity='sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=' crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.4/foundation.min.js')
+        //-script(src=url('/assets/jquery.js'))
+        script(src=url('/assets/munger.js'))
+        script(src=url('/assets/docs.js'))
