@@ -1,0 +1,11 @@
+mixin snippet-columns(columns)
+    .docs-snippet-columns
+        .row.align-spaced
+            each column in columns
+                .column.text-center
+                    span
+                        | !{snippetGet(column[1], column[2])}
+                    p: strong= column[0]
+
+        each column in columns
+            | !{snippetGetCode(column[1], column[2], column[0])}

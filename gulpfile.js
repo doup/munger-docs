@@ -2,10 +2,13 @@ var argv = require('minimist')(process.argv.slice(2));
 var browserSync = require('browser-sync').create();
 var del = require('del');
 var gulp = require('gulp');
-var pug = require('gulp-pug');
+var gulpPug = require('gulp-pug');
+var pug = require('pug');
 var sass = require('gulp-sass');
 var isPublishTask = argv._[0] == 'publish';
 var reloadBrowser = function reloadBrowser(done) { browserSync.reload(); done(); };
+var Entities = require('html-entities').AllHtmlEntities;
+var entities = new Entities();
 
 if (isPublishTask) {
     var baseUrl = 'https://doup.github.io/munger';
@@ -27,12 +30,29 @@ gulp.task('copy:font-awesome', function (done) {
 //        .pipe(gulp.dest('docs'));
 //});
 
+function snippetGet(file, vars) {
+    vars.pretty = true;
+
+    return pug.renderFile('src/snippets/'+ file, vars);
+}
+
 gulp.task('pug', function () {
     return gulp.src('src/docs/**/*.pug')
-        .pipe(pug({
+        .pipe(gulpPug({
             basedir: 'src',
             locals: {
                 url: (url) => baseUrl + url,
+                snippetGet: snippetGet,
+                snippetGetCode: (file, vars, comment) => {
+                    return '<pre>'+
+                        '<code class="html">'+ 
+                            entities.encode(
+                                (comment ? '<!-- '+ comment +' -->' : '')+
+                                snippetGet(file, vars).replace(/docs-[a-z]*\s?/gi, '')
+                            )+
+                        '</code>'+
+                    '</pre>';
+                }
             }
         }))
         .pipe(gulp.dest('docs'));;

@@ -8,6 +8,13 @@
 $fa-font-path: "fonts";
 @import 'font-awesome';
 
-body {
-    background-color: yellow;
+.docs-snippet-columns {
+    @include mu-with-gutter-size(1, margin-top, margin-bottom);
+}
+
+.docs-square {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid $light-gray;
 }
