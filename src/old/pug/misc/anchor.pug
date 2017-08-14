@@ -1,0 +1,14 @@
+extends ../index.pug
+
+block title
+    | mu-anchor
+
+block content
+    .row.column
+        a(href='#targetId') Goto 'Some section'
+        include ../partials/_block-placeholder
+    .row.column
+        a#targetId.mu-anchor
+        h2 Some section
+        p Notice how there is an offset on the anchor. This is useful when the website has a sticky header.
+        include ../partials/_block-placeholder

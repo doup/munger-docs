@@ -1,0 +1,47 @@
+extends ../index.pug
+include ../partials/_menu
+
+block title
+    | mu-header (A)
+
+block css
+    link(rel='stylesheet' href=url('/assets/header-a.css'))
+
+block header
+    header.mu-header.header-a
+        .header-a__top-border
+        .header-a__logo-wrapper(data-mu-fixed='small medium')
+            .row.column.mu-header__row.mu-header__row--logo
+                a.mu-header__logo(href='#')
+                    h1 Cello Verd
+                .mu-header__hover.show-for-large
+                    ul.mu-header__alt-menu(data-dropdown-menu)
+                        li
+                            a(href='#') Català <i class="fa fa-angle-down"></i></a>
+                            ul.locale-menu
+                                li: a(href='#') Castellano
+                                li: a(href='#') English
+                    ul.mu-header__alt-menu
+                        li: a(href='#') ES
+                        li: a(href='#') CA
+                        li: a(href='#') EN
+                    ul.mu-header__alt-menu
+                        li: a(href='#') <i class="fa fa-fw fa-linkedin"></i>
+                        li: a(href='#') <i class="fa fa-fw fa-twitter"></i>
+                        li: a(href='#') <i class="fa fa-fw fa-facebook"></i>
+                    ul.mu-header__alt-menu
+                        li: a(href='#') <i class="fa fa-fw fa-search"></i>
+                .mu-header__hover.mu-header__hover--middle.hide-for-large
+                    a.mu-header__hamburger(data-mu-mobile-menu-toggle): i.fa.fa-fw.fa-bars
+        .header-a__menu-wrapper(data-mu-fixed='large')
+            .row.column.show-for-large
+                +menu('mu-header__menu--start header-a__menu')
+        .mu-header__mobile-menu(data-mu-mobile-menu)
+            .row
+                .small-12.columns
+                    h1 test
+            
+
+block content
+    include ../partials/_twelve-columns
+    div(style="min-height: 200vh;")

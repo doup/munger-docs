@@ -1,0 +1,50 @@
+mixin menu(extra_class)
+    ul.menu.dropdown(data-dropdown-menu class=extra_class)
+        li.menu-item.current-menu-item.current_page_item: <a href="#/">Inici</a></li>
+        li.menu-item.menu-item-has-children
+            <a href="#">Qui som?</a>
+            ul.menu
+                li.menu-item: <a href="#/qui-som/cello-verd/">Cello Verd</a></li>
+                li.menu-item: <a href="#/qui-som/equip/">Equip</a></li>
+                li.menu-item: <a href="#/qui-som/xarxa/">Xarxa</a></li>
+                li.menu-item: <a href="#/qui-som/intercooperacio/">Intercooperació</a></li>
+        li.menu-item.menu-item-has-children
+            <a href="#/serveis/">Serveis</a>
+            ul.menu
+                li.menu-item: <a href="#/serveis/arquitectura-sostenible/">Arquitectura sostenible</a></li>
+                li.menu-item: <a href="#/serveis/enginyeria-de-proximitat/">Enginyeria de proximitat</a></li>
+                li.menu-item: <a href="#/serveis/urbanisme-transformador/">Urbanisme transformador</a></li>
+        li.menu-item: <a href="#/projectes/">Projectes</a></li>
+        li.menu-item.menu-item-has-children
+            <a href="#/actualitat/">Actualitat</a>
+            ul.menu
+                li.menu-item: <a href="#/actualitat/">Blog</a></li>
+                li.menu-item: <a href="/categoria/noticia/">Notícies</a></li>
+        li.menu-item: <a href="#/contacte/">Contacte</a></li>
+
+mixin menu-a(extra_class)
+    ul.menu.dropdown(data-dropdown-menu class=extra_class)
+        li.menu-item.current-menu-item.current_page_item: <a href="#/">Inici</a></li>
+        li.menu-item.menu-item-has-children
+            <a href="#">Qui som?</a>
+            ul.menu
+                li.menu-item: <a href="#/qui-som/cello-verd/">Cello Verd</a></li>
+                li.menu-item: <a href="#/qui-som/equip/">Equip</a></li>
+                li.menu-item: <a href="#/qui-som/xarxa/">Xarxa</a></li>
+                li.menu-item: <a href="#/qui-som/intercooperacio/">Intercooperació</a></li>
+        li.menu-item.menu-item-has-children
+            <a href="#/serveis/">Serveis</a>
+            ul.menu
+                li.menu-item: <a href="#/serveis/arquitectura-sostenible/">Arquitectura sostenible</a></li>
+                li.menu-item: <a href="#/serveis/enginyeria-de-proximitat/">Enginyeria de proximitat</a></li>
+                li.menu-item: <a href="#/serveis/urbanisme-transformador/">Urbanisme transformador</a></li>
+
+mixin menu-b(extra_class)
+    ul.menu.dropdown(data-dropdown-menu class=extra_class)
+        li.menu-item: <a href="#/projectes/">Projectes</a></li>
+        li.menu-item.menu-item-has-children
+            <a href="#/actualitat/">Actualitat</a>
+            ul.menu
+                li.menu-item: <a href="#/actualitat/">Blog</a></li>
+                li.menu-item: <a href="/categoria/noticia/">Notícies</a></li>
+        li.menu-item: <a href="#/contacte/">Contacte</a></li>

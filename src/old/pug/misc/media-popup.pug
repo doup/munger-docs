@@ -1,0 +1,18 @@
+extends ../index.pug
+
+block title
+    | [data-mu-media-popup]
+
+block content
+    .row
+        .column
+            p
+                a(data-mu-media-popup href=url('/assets/portrait.jpg')) Image popup
+            p
+                a.mfp-iframe(data-mu-media-popup href="https://www.youtube.com/watch?v=kfoJUeyMsOE") Iframe popup
+            p
+                a(data-mu-media-popup href=url('/assets/portrait.jpg')): img(src=url('/assets/portrait.jpg') width="300")
+            p
+                a.mfp-iframe(data-mu-media-popup href="https://www.youtube.com/watch?v=JgFKCuc3Cjs")
+                    span(style="width: 300px; height: 200px; background-color: #eee; display: inline-block; text-align: center; line-height: 200px;") Video thumbnail
+        

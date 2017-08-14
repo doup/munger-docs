@@ -1,0 +1,39 @@
+html, body {
+    background-color: #fff;
+}
+
+.docs-menu-hamburger {
+    position: fixed;
+    @include mu-with-gutter-size(.25, top, left);
+    width: 50px;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background-color: #eee;
+    z-index: 9999;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.25em;
+    opacity: .8;
+    color: #666;
+}
+
+.docs-menu {
+    position: fixed;
+    @include mu-with-gutter-size(.25, top, left);
+    @include mu-with-gutter-size(.5, padding);
+    width: 300px;
+    height: 90vh;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background-color: #eee;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 99999;
+}
+
+.docs-title {
+    position: fixed;
+    @include mu-with-gutter-size(.25, bottom, left);
+    z-index: 9999;
+}

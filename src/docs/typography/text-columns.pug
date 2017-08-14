@@ -1,0 +1,9 @@
+extends /templates/row-column
+
+block title
+    | Text columns
+
+block content    
+    +snippet('typography/text-columns.pug', { column_count: 2 })
+    +snippet('typography/text-columns.pug', { column_count: 3 })
+    +snippet('typography/text-columns.pug', { column_count: 4 })

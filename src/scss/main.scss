@@ -1,15 +1,44 @@
 @charset 'utf-8';
 
 @import 'settings/foundation-settings';
-@import 'settings/foundation-components';
 @import 'settings/munger-settings';
+
+@import 'settings/foundation-components';
 @import 'settings/munger-components';
 
 $fa-font-path: "fonts";
 @import 'font-awesome';
 
+$menu-width: 240px;
+
+.docs-menu {
+    padding: $mu-unit-05;
+    background-color: $light-gray;
+    position: fixed;
+    width: $menu-width;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow-y: scroll;
+}
+
+.docs-main {
+    position: fixed;
+    left: $menu-width;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow-y: scroll;
+}
+
+.docs-content {
+    padding-top: $mu-unit-05;
+    padding-bottom: $mu-unit-2;
+}
+
 .docs-snippet-columns {
-    @include mu-with-gutter-size(1, margin-top, margin-bottom);
+    margin-top: $mu-unit;
+    margin-bottom: $mu-unit;
 }
 
 .docs-square {

@@ -1,0 +1,36 @@
+@import 'settings/foundation-settings';
+@import 'munger';
+
+$mu-header-logo-size: 80px 80px;
+
+@include munger-layout-header;
+
+$light-blue: lighten($primary-color, 40%);
+
+.header-b {
+    background-color: $primary-color;
+}
+
+.header-b__menu > li > a {
+    font-size: $mu-small-size;
+    color: $light-blue;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+    &:hover {
+        background-color: lighten($primary-color, 2%);
+    }
+}
+
+header .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+    border-color: $light-blue transparent transparent;
+}
+
+.header-b__social-links a {
+    color: $light-blue;
+}
+
+.mu-header__hamburger {
+    border-color: $light-blue;
+    color: $light-blue;
+}

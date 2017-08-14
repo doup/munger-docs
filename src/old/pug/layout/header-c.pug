@@ -1,0 +1,46 @@
+extends ../index.pug
+include ../partials/_menu
+
+block title
+    | mu-header (C)
+
+block css
+    link(rel='stylesheet' href=url('/assets/header-c.css'))
+
+block header
+    header.mu-header.header-c(data-mu-fixed='small medium large')
+        .row.mu-header__row
+            .small-6.columns.mu-align--left
+                ul.mu-header__alt-menu.header-c__locales
+                    li: a(href='#') Cat
+                    li: a(href='#') Esp
+                    li: a(href='#') Eng
+            .small-6.columns.mu-align--right
+                ul.mu-header__alt-menu.header-c__social-links
+                    li: input.show-for-large.header-c__search-input(type='text')
+                    li: a(href='#') <i class="fa fa-fw fa-facebook"></i>
+                    li: a(href='#') <i class="fa fa-fw fa-twitter"></i>
+                    li: a(href='#') <i class="fa fa-fw fa-youtube"></i>
+        .row.mu-header__row.mu-header__row--logo
+            .large-4.columns.mu-align--left.show-for-large
+                +menu-a('mu-header__menu mu-header__menu--start')
+            .small-12.large-4.columns.mu-align--large-center
+                a.mu-header__logo(href='#')
+                    h1 Mugari
+            .large-4.columns.mu-align--right.show-for-large
+                +menu-b('mu-header__menu mu-header__menu--end')
+            .mu-header__hover.mu-header__hover--middle.hide-for-large
+                a.mu-header__hamburger: i.fa.fa-fw.fa-bars
+
+block content
+    include ../partials/_twelve-columns
+    include ../partials/_twelve-columns
+    include ../partials/_twelve-columns
+    include ../partials/_twelve-columns
+    include ../partials/_twelve-columns
+    include ../partials/_twelve-columns
+    include ../partials/_twelve-columns
+    include ../partials/_twelve-columns
+    include ../partials/_twelve-columns
+    include ../partials/_twelve-columns
+    div(style="min-height: 100vh;")

@@ -1,0 +1,18 @@
+extends ../index.pug
+
+block title
+    | mu-align
+
+block content
+    include ../partials/_twelve-columns
+    .row
+        .small-12.medium-4.columns.mu-align--left
+            div(style='width: 50px; height: 50px; background-color: #eee')
+        .small-12.medium-4.columns.mu-align--center
+            div(style='width: 50px; height: 50px; background-color: #eee')
+        .small-12.medium-4.columns.mu-align--right
+            div(style='width: 50px; height: 50px; background-color: #eee')
+            ul.mu-icon-list.mu-icon-list--horizontal
+                li.mu-icon-list__entry <a href="#"><i class="fa fa-facebook"></i></a>
+                li.mu-icon-list__entry <a href="#"><i class="fa fa-twitter"></i></a>
+                li.mu-icon-list__entry <a href="#"><i class="fa fa-instagram"></i></a>

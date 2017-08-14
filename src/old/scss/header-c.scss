@@ -1,0 +1,47 @@
+@import 'settings/foundation-settings';
+@import 'munger';
+
+$mu-header-logo-size: 250px 50px;
+
+@include munger-layout-header;
+
+.mu-fixed__element {
+    box-shadow: none;
+}
+
+.header-c {
+    height: 150px;
+    background: linear-gradient(#fff,#fff 130px, hsla(0,0%,100%,0) 150px);
+}
+
+.header-c .dropdown.menu > li.opens-right > .is-dropdown-submenu {
+    top: 65px;
+}
+
+.mu-header__menu, .mu-header__alt-menu {
+    & > li > a {
+        font-size: rem-calc(17px);    
+    }
+}
+
+.header-c__locales {
+    border-right: 0;
+    margin-left: -.5em;
+}
+
+.header-c__locales > li > a {
+    font-size: rem-calc(15px);
+}
+
+.header-c__social-links {
+    margin-right: -.5em;
+}
+
+.header-c__search-input {
+    margin-bottom: 0;
+    height: 28px;
+}
+
+body, main {
+    background-color: #fff;
+}

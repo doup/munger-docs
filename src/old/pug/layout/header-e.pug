@@ -1,0 +1,19 @@
+extends ../index.pug
+
+block title
+    | mu-header (E)
+
+block css
+    link(rel='stylesheet' href=url('/assets/header-e.css'))
+
+block header
+    header.mu-header
+        .row.column.mu-header__row.mu-header__row--logo.mu-align--medium-center
+            a.mu-header__logo(href='#')
+                h1 Mess
+            .mu-header__hover.mu-header__hover--top-edge.hide-for-large
+                a.mu-header__hamburger: i.fa.fa-fw.fa-bars
+
+block content        
+    include ../partials/_twelve-columns
+    div(style="min-height: 200vh;")

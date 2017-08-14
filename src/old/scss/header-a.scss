@@ -1,0 +1,51 @@
+@import 'settings/foundation-settings';
+@import 'munger';
+
+$mu-header-logo-size: (
+    small:  165px 50px,
+    medium: 220px 65px,
+    large:  260px 78px,
+);
+
+@include munger-layout-header;
+
+.header-a__top-border {
+    height: 20px;
+    background-color: #f3f0e8;
+    width: 100%;
+}
+
+.mu-header__row--logo {
+    @include breakpoint(medium down) {
+        box-sizing: content-box;
+        border-bottom: 5px solid $black;
+    }
+}
+
+.header-a__logo-wrapper {
+    background-color: #fff;
+}
+
+.header-a__menu-wrapper {
+    background-color: $black;
+}
+
+.header-a__menu > li > a {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+    &:hover {
+        border-bottom: 4px solid $primary-color;
+    }
+}
+
+.header-a__menu > li {
+    border-left: 1px solid #10354d;
+
+    &:first-child {
+        border-left: 0;
+    }
+}

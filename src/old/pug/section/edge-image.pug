@@ -1,0 +1,21 @@
+extends ../index.pug
+
+block title
+    | mu-edge-image
+
+block content
+    section.mu-edge-image.mu-edge-image--left.mu-bg--neutral
+        .row.expanded.mu-edge-image__image-wrapper
+            .large-5.medium-7.columns.mu-edge-image__image(style='background-image: url('+ url('/assets/portrait.jpg') +');')
+        .row
+            .medium-6.medium-offset-6.large-8.large-offset-4.columns.mu-edge-image__content.mu-bg--neutral
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    include ../partials/_twelve-columns
+
+    section.mu-edge-image.mu-edge-image--right.mu-bg
+        .row.expanded.mu-edge-image__image-wrapper
+            .large-5.large-offset-7.medium-7.medium-offset-5.columns.mu-edge-image__image(style='background-image: url('+ url('/assets/portrait.jpg') +');')
+        .row
+            .medium-6.large-8.columns.mu-edge-image__content.mu-bg
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

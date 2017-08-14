@@ -1,8 +1,13 @@
+mixin snippet(file, vars)
+    .docs-snippet
+        | !{snippetGet(file, vars)}
+        | !{snippetGetCode(file, vars)}
+
 mixin snippet-columns(columns)
     .docs-snippet-columns
         .row.align-spaced
             each column in columns
-                .column.text-center
+                .column
                     span
                         | !{snippetGet(column[1], column[2])}
                     p: strong= column[0]

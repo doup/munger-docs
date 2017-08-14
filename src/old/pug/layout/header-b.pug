@@ -1,0 +1,27 @@
+extends ../index.pug
+include ../partials/_menu
+
+block title
+    | mu-header (A)
+
+block css
+    link(rel='stylesheet' href=url('/assets/header-b.css'))
+
+block header
+    header.mu-header.header-b(data-mu-fixed='small medium large')
+        .row.mu-header__row.mu-header__row--logo
+            .large-3.columns
+                a.mu-header__logo(href='#')
+                    h1 La Boop
+            .large-9.columns.mu-align--right
+                +menu('header-b__menu mu-header__menu mu-header__menu--text-bottom mu-header__menu--end show-for-large')
+            .mu-header__hover.header-b__social-links
+                ul.mu-header__alt-menu
+                    li: a(href='#') <i class="fa fa-fw fa-facebook"></i>
+                    li: a(href='#') <i class="fa fa-fw fa-twitter"></i>
+            .mu-header__hover.mu-header__hover--bottom.hide-for-large
+                a.mu-header__hamburger: i.fa.fa-fw.fa-bars
+
+block content
+    include ../partials/_twelve-columns
+    div(style="min-height: 200vh;")
